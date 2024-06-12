@@ -142,7 +142,8 @@ h3 {
 
 
 .images {
-    width: 600px;
+    width: 400px;
+    height: 400px;
     text-align: center;
     overflow: hidden;
     border-radius: 15%;
