@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
+    <title>Project Kelompok 4</title>
+</head>
+
+<body>
+    <section>
+        <!--Bagian Navigasi-->
+        <header class="container">
+            <div class="page-header">
+                <input type="checkbox" id="click">
+                <div class="logo">
+                    <a href="#">Project Matdis</a>
+                    <label class="mode">
+                        <input type="checkbox" id="darkModeToggle">
+                        <i class='bx bxs-moon'></i>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <!--Bagian Home-->
+        <div class="container">
+            <div class="page-header">
+                <div class="main">
+                    <div class="images">
+                        <img src="https://images.msha.ke/5ad83637-901c-4aaa-b771-29a52a099270?auto=format%2Ccompress&cs=tinysrgb&q=30&w=828"
+                            alt="" class="img-w">
+                    </div>
+                    <h1><span style="color:#0095ff;">Kelompok</span> 4</h1>
+                    <h3>Nama Anggota Kelompok:</h3>
+                    <h4>ANIIQI KARIMA ALI <span style="color:#0095ff;">(2304436)</span></br>
+                        RAFLI ARRASYID <span style="color:#0095ff;">(2307048)</span></br>
+                        RAHMA ZAIMATUL AZHAR <span style="color:#0095ff;">(2308940)</span></br>
+                        YUMNA ASHRI NABILAH <span style="color:#0095ff;">(2304047)</span></h4>
+                </div>
+            </div>
+        </div>
+
+        <!--Penjelasan-->
+        <div class="container">
+            <h2 class="title">About</h2>
+            <div class="main">
+                <p>Kalkulator ini dibuat untuk memenuhi tugas proyek akhir mata kuliah Matematika Diskrit.
+                    Kalkulator ini mampu menghitung faktorial dan fibonacci dengan cepat dan akurat. Menerima input
+                    berupa angka dan variabel. Juga menyediakan visualisasi untuk membantu memahami proses
+                    perhitungan.
+                    Kalkulator ini juga sebagai alat bantu online yang dirancang untuk membantu Anda menghitung
+                    permutasi dan kombinasi dengan cepat dan mudah
+                </p>
+            </div>
+        </div>
+
+        <!--Bagian kalkulator-->
+        <div class="container">
+            <h2 class="title">Kalkulator</h2>
+
+
+            <div class="main">
+                <div class="card">
+                    <img src="https://i.ibb.co.com/YPPbsTR/0044d1db-88d8-40b3-b273-b0f83a17a0e9.jpg">
+                    <h4><b>Faktorial dan Fibonacci</b></h4>
+                    <center><a class="button" href="https://dragneel1111.github.io/recursive-calculator/">click here</a>
+                    </center>
+                </div>
+                <div class="card">
+                    <img src="https://i.ibb.co.com/yy5fhYV/35f5c95d-b8bb-495d-92b7-a4c0eec74189.jpg">
+                    <h4><b>Kombinasi dan Permutasi</b></h4>
+                    <center><a class="button" href="https://dragneel1111.github.io/counting/">click here</a></center>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+    if (isDarkMode) {
+        body.classList.add('dark-mode');
+        darkModeToggle.checked = true;
+    }
+    darkModeToggle.addEventListener('change', () => {
+        if (darkModeToggle.checked) {
+            body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+
+</script>
+
+</html>
